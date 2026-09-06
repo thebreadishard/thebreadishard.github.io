@@ -1,0 +1,33 @@
+title: thebreadishard
+description: >-
+  Notes from a student project on predicting the infrared spectra of large carbon
+  molecules in space, written so that non-specialists can follow along.
+url: "https://thebreadishard.github.io"
+baseurl: ""
+author:
+  name: Frederic Petrignani
+lang: en
+
+theme: minima
+minima:
+  skin: classic
+  social_links:
+    github: thebreadishard
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+show_excerpts: true
+timezone: Europe/Amsterdam
+
+header_pages:
+  - about.md
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
