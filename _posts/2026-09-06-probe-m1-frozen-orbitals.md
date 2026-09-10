@@ -121,3 +121,17 @@ and the tight-settings run is commit
 [c1bc4e0](https://github.com/thebreadishard/udacity-capstone-plan/commit/c1bc4e0).
 The result files are in `probes/results_m1/`. The project plan has not been reviewed by my
 supervisor yet, so read this as a student's lab notebook, not as a finished result.
+
+## Correction, 10 September 2026
+
+Every bias in this post is twice too large. The script that compared each arm with the truth line
+reported the change in the *curvature* of the energy curve and I converted that straight into
+wavenumbers. In the coordinates we use, a change in curvature is twice the change in frequency, so
+the numbers that matter for a spectrum are half of what is written above: the first, broken run was
+off by 12, 23 and 74 wavenumbers (not 23, 46 and 147); the fixed rerun by 1.3, 0.25 and 0.9 (not
+2.6, 0.5 and 1.8); and with tight settings by 0.07, 0.015 and 0.18 (not 0.14, 0.03 and 0.36). The
+scatter figures in micro-hartree were never affected, and the conclusion stands: the frozen curve is
+smooth and, with tight settings, almost unbiased. I checked the factor against an identity in the
+project's own DFT data before writing this, and the correction is recorded in the repository
+(research note, erratum at the head of §2). I leave the original text as it was; that is the rule of
+this notebook.
