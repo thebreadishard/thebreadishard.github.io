@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "One decade tighter: how we found out what the leftover error was made of"
-date: 2026-09-13 12:00:00 +0200
+date: 2026-09-15 21:00:00 +0200
 categories: plan05 probes
 ---
 
-*Draft for review — not published. Numbers from the scripts linked at the end; nothing here is a claim about
+*Written 12–13 September, published 15 September. Numbers from the scripts linked at the end; nothing here is a claim about
 the pipeline's final accuracy, which does not exist yet.*
 
 The first post ended with a number: when we freeze the "orbital spaces" of the local coupled-cluster
