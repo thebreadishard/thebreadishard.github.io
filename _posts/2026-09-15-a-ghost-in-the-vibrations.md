@@ -5,7 +5,7 @@ date: 2026-09-15 20:45:00 +0200
 categories: plan05 probes
 ---
 
-Yesterday's long calculation on naphthalene finished at a quarter to two in the afternoon. It had run for twenty
+This afternoon the long calculation on naphthalene finished at a quarter to two. It had run for twenty
 hours, one energy every seventy minutes, and the number we wanted from it — how much cheaper a smaller basis set
 makes each energy — came out cleanly: ten times cheaper, with a tenth of the memory. That was the plan. This post is
 about something we did not plan: a small, silent error that the same run exposed in passing, what it turned out to
@@ -23,7 +23,7 @@ Symmetry offers a shortcut. Naphthalene is a flat molecule with three mirror pla
 "antisymmetric" under at least one of them: displace the molecule along such a vibration, mirror it, and you get the
 displacement in the opposite direction. For those vibrations the energy at +q must equal the energy at −q exactly,
 by symmetry, and the force along them is zero exactly. So one energy per displacement would do instead of two,
-and the deck of measurements shrinks by almost forty percent. We had adopted that shortcut as a rule on Sunday,
+and the deck of measurements shrinks by almost forty percent. We had adopted that shortcut as a rule yesterday,
 with one condition: it had to be confirmed on naphthalene before it was used.
 
 ## The ghost
