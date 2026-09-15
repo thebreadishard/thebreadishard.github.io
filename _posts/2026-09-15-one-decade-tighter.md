@@ -5,9 +5,6 @@ date: 2026-09-15 20:30:00 +0200
 categories: plan05 probes
 ---
 
-*Written 12–13 September, published 15 September. Numbers from the scripts linked at the end; nothing here is a claim about
-the pipeline's final accuracy, which does not exist yet.*
-
 The first post ended with a number: when we freeze the "orbital spaces" of the local coupled-cluster
 method and move the molecule along one of its vibrations, the energy curve is smooth, but its curvature is
 off by a small, systematic amount compared with the full, expensive calculation. In frequency terms that
@@ -96,5 +93,3 @@ Everything in this post is printed by scripts in the public plan repository: the
 comparison with the sealed reference (commit 39b1764), the cheap basis line (commit 1806244), the dated
 decision that put the two basis terms into the anchor and its implementation (commits 1a7c395 and
 b4b478f). The benzene reference energies themselves stay sealed until the plan's pilot note, as before.
-
-*Next time: what the naphthalene measurement says about where the rest of this project can be computed.*

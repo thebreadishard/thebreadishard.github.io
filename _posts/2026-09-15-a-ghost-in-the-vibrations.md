@@ -1,12 +1,9 @@
 ---
 layout: post
 title: "A ghost in the vibrations: how a one-in-ten-thousand impurity nearly cost us 11 cm⁻¹"
-date: 2026-09-16 12:00:00 +0200
+date: 2026-09-15 20:45:00 +0200
 categories: plan05 probes
 ---
-
-*Draft for review — not published. Every number below is printed by a script in the public plan repository; the
-commits are listed at the end. Nothing here is a claim about the pipeline's final accuracy, which does not exist yet.*
 
 Yesterday's long calculation on naphthalene finished at a quarter to two in the afternoon. It had run for twenty
 hours, one energy every seventy minutes, and the number we wanted from it — how much cheaper a smaller basis set
@@ -108,6 +105,3 @@ the symmetrised geometry (`symmetrise_geometry.py`, commit 90bbf7a); the project
 (`dryrun_dft_delta_recovery.py --symmetrised`, commit 713fe01); the cheap before/after test (`i14_odd_part_dft.py`,
 commits 34f8a67 and 8016433). The naphthalene coupled-cluster energies themselves stay sealed; only differences
 between them are printed, as with benzene.
-
-*Next time: what the ten-times-cheaper energy does to the size of the ladder — and why phenanthrene costs almost
-twice as much as its isomer anthracene.*
