@@ -120,3 +120,21 @@ is exactly the transaction it was written for.
 Everything here is in
 [commit fab1fff](https://github.com/thebreadishard/udacity-capstone-plan/commit/fab1fff) — the finding, the
 raw numbers, and the script that reproduces the pricing table.
+
+---
+
+**Addendum, 16 September, later the same evening.** The section above about the band-width setting is
+wrong in its mechanism, and I would rather correct it than let it stand. I wrote that the rule picks 25
+because 0.034 is the smallest number in the top row. It does not. That top row selects a different knob
+entirely. The width is chosen by a different test: take the smallest width whose worst frequency error
+clears a tolerance of 5 cm⁻¹. At width 25 the error is 3.37, which clears 5, so the search stops there and
+never looks at 400.
+
+That makes the fault worse rather than better, in two ways. First, the test measures the error against the
+right answer — which we have in this rehearsal, because it is a rehearsal, and which we will not have on a
+real molecule. As written, the rule cannot be run in production at all. Second, its shape is "smallest
+setting that is good enough", so it stops at the first acceptable answer instead of the best available one.
+A tolerance is a floor. This rule was treating it as a target.
+
+The conclusion of that section is unchanged: the setting needs a new design, and the redesign is what I am
+working on now.
