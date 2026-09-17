@@ -196,3 +196,16 @@ number against our own code and found a discrepancy twenty times too large to be
 the right quantity, the ratio is 6.0 instead of 5.7, and the saving at naphthalene is **about 2.5 times**,
 not 2.7. Nothing else in the argument moves. The lesson is the same one this whole post is about: an
 attribute named like the method is not the method's energy — read the property, not the name.
+
+**Fifth addendum, 17 September, night.** The last test named in the third addendum has run. The
+question was whether the gradient code we can already run — a published local coupled-cluster package —
+computes the same quantity as our own frozen-space energies, so that we could borrow it instead of writing
+our own. The answer is no. On benzene's three probe vibrations, at matched settings, its response differs
+from ours by 5.5, 8.2 and 26.4 millionths against a bar of 6 that was fixed beforehand: one of three
+inside, one narrowly out, one four times over. At the package's own default settings one response came
+out at half of ours. The differences are systematic — it re-derives its local orbitals at every geometry,
+we freeze ours once and carry them — which is the very design choice this plan made and measured earlier.
+So the gradient route stands, but its engine has to be built rather than borrowed: two to three weeks of
+work that the earlier numbers had hoped to skip. The cost ratio of 6.0 quoted above belongs to the
+borrowed engine; ours is unmeasured until it exists.
+[Commit 9e6eaee](https://github.com/thebreadishard/udacity-capstone-plan/commit/9e6eaee).
