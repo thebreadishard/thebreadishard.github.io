@@ -157,3 +157,33 @@ Two things this does not settle. The exact recovery assumes exact gradients; how
 propagates through that construction is untested. And the cost ratio for the expensive method we
 actually use has never been measured, because neither way of measuring it fits on this laptop. But the
 bar it has to clear moved from 1.84 to 16.2, which is a different conversation entirely.
+
+**Third addendum, 17 September, evening.** Both tests this post promised have now run, on the same
+cheap stand-in data, with their thresholds written down before the numbers existed.
+
+The amplitude test — push the molecule half as far, so that the model's own error should fall
+sixteen-fold while the signal falls only fourfold — did not work. On all 616 coupling patterns, matched
+one for one against the full-amplitude set, the signal fell by exactly the predicted factor of four and
+the leftover did not move at all: 0.96 before, 1.03 after, at every band width. That is neither of the two
+outcomes I had written down. A leftover that scales with the signal is not noise and not the model's
+curvature error; it means the design itself — hundreds of energies against more than a thousand unknown
+couplings — cannot pin the couplings down however hard or gently you push. The energy route to the
+couplings is closed at naphthalene. The diagonal, each vibration on its own, is untouched.
+
+The second test asked whether that matters for what anyone can measure. Above naphthalene the best
+laboratory references resolve 5 to 17 cm⁻¹, so I asked: if you drop the couplings entirely, does the
+*shape* of the spectrum change at that resolution? For the C–H stretches, no — under 2 % of the peak.
+For the fingerprint region between 6 and 9 µm, where the strongest astronomical PAH bands sit, yes: the
+couplings mix neighbouring vibrations, one band keeps only 83 % of its identity, positions move by up to
+21 cm⁻¹ and intensities by up to 28 %, and the smoothed spectra differ by a third of the peak at 5 cm⁻¹
+and by a fifth at 13. No reference is blurry enough to hide that.
+
+So the two tests close the same door from both sides. The couplings cannot be skipped, and they cannot
+be had from energies at this size. They come from gradients: the 18-gradient construction of the second
+addendum, which recovers every coupling exactly and, measured today, costs about 2.7 times less than the
+energy deck it replaces. One question remains before it becomes the plan of record — whether the
+gradient code we can run computes the same quantity our own energies do — and its test is written and
+starting tonight.
+
+Commits: [610bfcb](https://github.com/thebreadishard/udacity-capstone-plan/commit/610bfcb),
+[ff54669](https://github.com/thebreadishard/udacity-capstone-plan/commit/ff54669).
