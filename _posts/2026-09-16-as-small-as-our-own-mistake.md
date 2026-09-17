@@ -187,3 +187,12 @@ starting tonight.
 
 Commits: [610bfcb](https://github.com/thebreadishard/udacity-capstone-plan/commit/610bfcb),
 [ff54669](https://github.com/thebreadishard/udacity-capstone-plan/commit/ff54669).
+
+**Fourth addendum, 17 September, late.** One number in the third addendum needs correcting, and the
+reason is worth a sentence. The "about 2.7 times less" rested on a cost ratio for gradients that I had
+read off the wrong attribute of the software: it reported the small triples correction on its own rather
+than the whole correlation energy. The mistake surfaced within the hour, when the next test compared that
+number against our own code and found a discrepancy twenty times too large to be physics. Re-measured on
+the right quantity, the ratio is 6.0 instead of 5.7, and the saving at naphthalene is **about 2.5 times**,
+not 2.7. Nothing else in the argument moves. The lesson is the same one this whole post is about: an
+attribute named like the method is not the method's energy — read the property, not the name.
