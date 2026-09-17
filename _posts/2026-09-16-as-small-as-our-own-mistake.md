@@ -138,3 +138,22 @@ A tolerance is a floor. This rule was treating it as a target.
 
 The conclusion of that section is unchanged: the setting needs a new design, and the redesign is what I am
 working on now.
+
+**Second addendum, 17 September.** The pricing section above is wrong, in the direction that matters,
+and the error was mine: I priced the wrong version of the alternative.
+
+Measuring gradients can be done two ways. You can assume nothing and solve for all 1,128 possible
+couplings, which needs 96 gradients — that is the number I quoted. Or you can use the fact that a
+symmetric molecule only allows certain pairs to couple at all, which cuts 1,128 down to 141 and needs
+**18 gradients**, recovering every element exactly rather than by fitting. An experiment from four days
+ago had already measured this; I quoted its dense row and missed its symmetry row.
+
+The difference is not small. Instead of replacing 177 calculations with 96 gradients, you replace the
+entire deck of 291 with 18. The break-even cost ratio moves from 1.84 to **16.2**, against a measured
+ratio of about 3. So at naphthalene the gradient route is roughly **five times cheaper** than the
+energy route, not 1.45 times more expensive.
+
+Two things this does not settle. The exact recovery assumes exact gradients; how measurement noise
+propagates through that construction is untested. And the cost ratio for the expensive method we
+actually use has never been measured, because neither way of measuring it fits on this laptop. But the
+bar it has to clear moved from 1.84 to 16.2, which is a different conversation entirely.
