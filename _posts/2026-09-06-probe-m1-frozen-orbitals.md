@@ -19,6 +19,41 @@ fairly sure the molecules responsible are large, flat carbon molecules called PA
 trouble is that for the big PAHs nobody has a laboratory spectrum, so if we want to know
 what a particular molecule would look like, we have to compute it.
 
+## What this project does — added 19 September 2026
+
+*This section was not in the post as first published. Rereading it two weeks later, we found that it
+explains one measurement but never says what the project as a whole is trying to do. So here it is,
+added and dated, with the original text left as it was below.*
+
+Everyone who computes a PAH spectrum today starts from the same cheap method, called DFT. It gives a
+good sketch of how the molecule vibrates — which atoms move in each vibration and, roughly, how
+stiff each vibration is — and it is fast enough for thousands of molecules. Its band positions are
+systematically off, and the usual fix is to multiply them all by a fudge factor fitted to a few
+laboratory spectra. The accurate method, coupled cluster, gets the stiffness right but is so slow
+that for the molecules astronomers care about nobody can afford it.
+
+Our idea is not to replace the sketch but to correct it, and to learn the correction:
+
+1. **Take the DFT sketch** of a molecule: its stiffness matrix and the vibrations that follow from it.
+2. **Measure the correction** to that stiffness with a small number of coupled-cluster calculations
+   — not a full coupled-cluster treatment, but a handful of energies and gradients chosen so that they
+   pin down exactly the difference between the cheap and the accurate stiffness. This is affordable for
+   small and medium molecules, and it gives each of them a measured correction with a known error.
+3. **Train a network** on those measured corrections, so that for a large molecule where no one can
+   afford step 2 it predicts the correction from the DFT sketch alone. It is allowed to do so only per
+   family of vibrations where it has passed a test against molecules we could measure, and it must
+   refuse where it has not.
+4. **Compute the spectrum** from the corrected stiffness: the band positions are the eigenvalues of
+   the corrected matrix, the intensities come from DFT as before, and every band carries the error
+   margin of its family. There is no Fourier transform anywhere in this; that is how spectra are made
+   from molecular-dynamics simulations, which is a different approach altogether.
+
+Step 2 only works if the coupled-cluster energies change *smoothly* when the atoms are pushed a little
+— otherwise the difference we are trying to measure drowns in the method's own noise. Whether a cheap
+local version of coupled cluster can be made smooth enough is what the measurement below is about. It
+was the first thing that had to be true for the rest to make sense, and it is why the project's first
+post is about frozen orbitals rather than about spectra.
+
 ## Why computing it is hard
 
 A spectrum is decided by how the energy of the molecule changes when you push its atoms
