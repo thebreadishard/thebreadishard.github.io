@@ -61,10 +61,10 @@ morning; every energy since has arrived on schedule; the frozen orbital spaces t
 possible behaved exactly as the benzene tests said they would. The instrument works. It just measured
 something we would rather not have found, on the first family we pointed it at.
 
+Which is, we keep reminding ourselves, what an instrument is for.
+
 One footnote from later the same evening. At 19:27 the laptop was restarted, and the run died with it, forty
 minutes into the second family. The design absorbed it: the reference spaces and the five finished points
 were sealed on disk, the restart reloaded them, checked the reference against its sealed value in one second
 (the same 0.0002 microhartree), recovered a partly solved fragment from a checkpoint, and went on. The cost
 was under an hour. The report now lands in the small hours of Friday instead of Thursday evening.
-
-Which is, we keep reminding ourselves, what an instrument is for.
