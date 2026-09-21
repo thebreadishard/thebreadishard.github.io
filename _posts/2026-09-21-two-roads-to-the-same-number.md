@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Two roads to the same number"
-date: 2026-09-21 17:55:00 +0200
+date: 2026-09-21 17:50:00 +0200
 categories: plan05 probes software
 ---
 
