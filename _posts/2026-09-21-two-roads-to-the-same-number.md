@@ -92,10 +92,10 @@ code and in the ledger.
 The tail of the pipeline, the part that turns corrected stiffness matrices into a spectrum, was the one
 piece we had never seen produce a sensible number. Now it has, with known software and a measured error.
 The two-route check has become a fixed step in the label factory: every derived quantity gets a second route
-or a symmetry partner, and the difference becomes a line in the error budget. The three fixes this required
-in other people's software, two in one package and one in another, were submitted to their maintainers today,
-with the benzene numbers attached, after the packages' own test suites had been run with the changes in
-place.
+or a symmetry partner, and the difference becomes a line in the error budget. Three fixes to other people's
+software that this week's work turned up, two in one package and one in another, went to their maintainers
+today, the benzene numbers attached to the one that came out of this finding, after the packages' own test
+suites had been run with the changes in place.
 
 What it does not change is the question the plan actually hangs on: whether corrections measured on small
 molecules carry to large ones. That answer starts arriving on Friday, from the run on the laptop in the
