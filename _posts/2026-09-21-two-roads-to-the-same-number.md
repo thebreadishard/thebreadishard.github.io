@@ -103,3 +103,5 @@ living room.
 
 Two roads to the same number, and the distance between them is the error bar. It was there all along; we
 only had to print it.
+
+*Addendum, 21 September 18:2x.* The 47 in the exact-input column was, as suspected, our own diagnostic: inside pairs of identical vibrations it read the matrices in a slightly rotated basis. With the basis aligned to the actual nudges the worst disagreement for the exact input is 0.9 wavenumbers, and the three bands read 851, 1004 and 1324 against 849, 992 and 1310. The other two columns are unchanged.
