@@ -5,8 +5,8 @@ date: 2026-09-22 17:20:00 +0200
 categories: plan05 probes
 ---
 
-This morning a run that had taken thirty hours handed back twenty corrected vibration frequencies for benzene, and three of
-them were wrong by a margin that could not be waved away. The four carbon–hydrogen stretches, the highest-pitched motions
+This morning a run that had taken thirty hours handed back twenty corrected vibration frequencies for benzene, and some of
+them were wrong by a margin that could not be waved away. The carbon–hydrogen stretches, the highest-pitched motions
 of the molecule, came out forty-five to sixty wavenumbers below the best numbers in the literature. The ten in-plane motions
 had landed within a few wavenumbers. Something in the recipe treated one kind of motion differently from another.
 
