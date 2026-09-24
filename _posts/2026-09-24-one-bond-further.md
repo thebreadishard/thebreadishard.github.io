@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "One bond further"
-date: 2026-09-24 15:30:00 +0200
+date: 2026-09-24 15:14:51 +0200
 categories: plan05 learning
 ---
 
