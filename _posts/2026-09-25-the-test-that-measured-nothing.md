@@ -51,8 +51,8 @@ with two more stages of the search to run before anyone is allowed to say the mo
 
 **Where this leaves the proof.** The network learns: a control trained on scrambled labels learns nothing (its error ratio stays above
 one), and the real one halves the error on unseen molecules. Whether it learns *fast enough* per tenfold of data is being decided by a
-run that started this morning on three rented machines: twenty-six new molecules done by mid-afternoon, no failures, about forty
-minutes each, with the predictions for the curve written down before the first one finished. The first reading is due Sunday evening.
+run that started this morning on three rented machines: twenty-six new molecules done by mid-afternoon, one failed geometry optimisation set aside
+for a retry, about forty minutes each, with the predictions for the curve written down before the first one finished. The first reading is due Sunday evening.
 
 *Numbers in this post: the E11 pre-registration and its amendments (`GoalGathering/notes/PreRegistration_2026-09-25_E11_Proof_Strengthening_Desk_Tests.md`),
 the symmetry read-outs (`modules/05_support_predictor/out/E11_target_symmetry_2026-09-25.json`, `out/E11_orbit_dump_2026-09-25_dump.md`),
