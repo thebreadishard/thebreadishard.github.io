@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The test that measured nothing"
-date: 2026-09-25 16:03:00 +0200
+date: 2026-09-25 16:01:00 +0200
 categories: plan05 learning
 ---
 
