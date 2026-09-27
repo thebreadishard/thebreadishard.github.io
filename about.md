@@ -25,3 +25,7 @@ just as importantly, says clearly when it cannot.
 
 **Where the work lives.** The plans, scripts and results are in the public repository
 [thebreadishard/udacity-capstone-plan](https://github.com/thebreadishard/udacity-capstone-plan).
+
+## The atlas
+
+The catalogue behind these posts is the [Spectrum Atlas](https://thebreadishard.github.io/spectrum-atlas/): the molecules, their status on the ladder, the harmonic frequencies and the provenance of every number, updated from the project repository at each build.

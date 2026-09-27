@@ -24,6 +24,7 @@ show_excerpts: true
 timezone: Europe/Amsterdam
 
 header_pages:
+  - atlas.md
   - about.md
 
 exclude:

@@ -8,4 +8,6 @@ the infrared "fingerprints" of large carbon molecules that astronomers see in sp
 Each post explains one measurement or one decision from the project in plain English.
 Every number in a post comes from a script in the
 [project repository](https://github.com/thebreadishard/udacity-capstone-plan), and each
-post links to the commit it describes, so you can check for yourself.
+post links to the commit it describes, so you can check for yourself. The results themselves are
+browsable in the [Spectrum Atlas](https://thebreadishard.github.io/spectrum-atlas/): every molecule the
+pipeline has touched, with its status and the provenance of each number.
