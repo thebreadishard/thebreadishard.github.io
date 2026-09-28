@@ -5,8 +5,8 @@ date: 2026-09-28 21:29:54 +0200
 categories: plan05 progress
 ---
 
-The last two posts here were about things that did not work: a network that was never the problem, and a test that measured nothing. Both left a rule
-behind. Today those rules became a product. In one evening the project gained the piece that turns three weeks of experiments into something a
+Two posts earlier this week were about things that did not work: [a network that was never the problem]({% post_url 2026-09-23-the-network-was-never-the-problem %}),
+and [a test that measured nothing]({% post_url 2026-09-25-the-test-that-measured-nothing %}). Both left a rule behind. Today those rules became a product. In one evening the project gained the piece that turns three weeks of experiments into something a
 scientist can actually ask a question of: a service that answers a request for a molecule with a **certificate**, or with an **honest no**.
 
 **The problem, in one paragraph.** People who read the infrared light of interstellar dust compare it with databases of molecular spectra. For the
@@ -58,7 +58,7 @@ and the curve may fail. The prices are measured on one molecule size. The public
 hidden on the page.
 
 Three weeks ago this project had a plan and a laptop. Tonight it has a public atlas, a request officer, a certificate with a provenance block, and a
-refusal that prices what is missing. The two posts before this one explain why the refusal is the part I am proudest of.
+refusal that prices what is missing. Those two posts from earlier this week explain why the refusal is the part I am proudest of.
 
 *Code and records: module 08 in the plan repository
 ([commit 9b68549](https://github.com/thebreadishard/udacity-capstone-plan/commit/9b68549)); the naphthalene certificate lives beside it as JSON and as a
