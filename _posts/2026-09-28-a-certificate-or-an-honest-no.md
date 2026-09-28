@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A certificate, or an honest no"
-date: 2026-09-28 21:28:00 +0200
+date: 2026-09-28 21:29:54 +0200
 categories: plan05 progress
 ---
 
