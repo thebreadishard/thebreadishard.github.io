@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{%- comment -%}
+  minima 2.5.1's home layout (jekyll/minima v2.5.1, _layouts/home.html) with one change (14 Oct 2026): under each title a teaser taken from
+  the post's text, not post.excerpt. The excerpt is the first paragraph, which for posts that open with an HTML comment (their source notes)
+  is the comment itself, so those posts showed nothing. The teaser is the text with HTML and comments stripped, cut at 60 words; the
+  stylesheet (assets/main.scss, .post-teaser) shows two lines of it at any screen width. The full text is behind the title.
+{%- endcomment -%}
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          <p class="post-teaser">{{ post.content | strip_html | normalize_whitespace | truncatewords: 60 }}</p>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>
