@@ -4,6 +4,16 @@
 @import "minima";
 
 // The home page's teaser under each post title: two lines at any screen width (14 Oct 2026; _layouts/home.html)
+// The glossary (15 Oct 2026; glossary.md): term in bold, its sentence beneath, room between entries
+.glossary dt {
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.glossary dd {
+  margin-left: 0;
+}
+
 .post-teaser {
   display: -webkit-box;
   -webkit-box-orient: vertical;
