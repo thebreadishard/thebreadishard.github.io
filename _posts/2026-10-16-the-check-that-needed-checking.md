@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "The check that needed checking"
-date: 2026-10-16 15:00:00 +0200
+date: 2026-10-16 13:20:00 +0200
 categories: plan05 progress
 ---
 
-<!-- Written 16 Oct 2026 at the user's request ("Ja, schrijf post 23 maar als concept"); a draft until the user's word.
+<!-- Written 16 Oct 2026 at the user's request ("Ja, schrijf post 23 maar als concept"); published the same day on the user's word
+     ("Publiceer maar").
      Numbers trace to (CapstonePlan repo, plans/05_delta-probed-ir-pipeline):
      GoalGathering/notes/Design_2026-10-12_Residual_Checked_APT.md (the solver 7e-5 to 1e-4 off its system; benzene 0.06 cm-1 on the Hessian,
        4.3e-4 e on the charge table, heights <= 0.6 %; refined 3.75e-5; the field route's own error on water 9e-6 at F = 1e-3),
