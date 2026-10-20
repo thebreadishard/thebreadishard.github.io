@@ -86,3 +86,16 @@ target; it says the correction carries in size, not yet that the coupled-cluster
 calculations for them showed an unstable vibration; they come back when better reference calculations exist. And the density-fitting
 shortcut was tested on two molecules and adopted with a margin smaller than predicted: if one of the new anchors behaves differently, the old
 way is still there, on a server, when the budget allows.
+
+**Addendum, 20 October, 07:30.** A reader's devil's-advocate question: if both models were equally bad on the five-ring molecules, the ratio
+would still say "equal". So how good are they, not just how alike? The registration had promised four more numbers beside the ratio, one
+per family of vibrations, and our read script had left them out. They are in now ([the addendum](https://github.com/thebreadishard/udacity-capstone-plan/commit/e0dde855)),
+computed after the result was known, so they carry no line.
+
+They are not equally bad: without any five-ring molecule in training, the model still removes about 82 % of the frequency error on these
+molecules (from 22.6 to 4.0 cm⁻¹). But they are not good enough either. Our target is 3 cm⁻¹ or less in every family, and on the five-ring
+molecules no family gets there, with or without five-ring examples: the out-of-plane hydrogen bends and the catch-all family sit at 4 to 5
+cm⁻¹, as they also do on some families inside the corpus. And one family tells a different story from the ratio: the carbon–hydrogen
+stretches are off by 3.2 cm⁻¹ without five-ring examples and by 1.2 to 1.4 with them, about two and a half times better. So the sentence
+"size is not a wall" holds for the ring couplings, which is what the test was built to measure. It does not mean the corpus can do without
+larger ring systems: a handful of them clearly helps.
