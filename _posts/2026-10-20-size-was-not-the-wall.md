@@ -16,7 +16,11 @@ categories: plan05 progress
        swap test pyridine 0.423, naphthalene 0.460 cm-1 (line 0.5; prediction < 0.3 wrong); rows 9/33 and 30/136 s against 13/196 and
        79/1,996 s; peak RSS 3.33 GB; five anchors about 8.4 h; probes/results_m1/dfmp2_composite_2026-10-19/.
      The 98 worker-hours at 26 GB: GoalGathering/notes/PreRegistration_2026-10-12_Anchor_Set_Three.md, declaration of 19 Oct.
-     Quinoxaline: probes/results_m1/dfmp2_anchors_2026-10-20/composite_quinoxaline.md (commit 190be713); registry modules/ANCHORS.md. -->
+     Quinoxaline: probes/results_m1/dfmp2_anchors_2026-10-20/composite_quinoxaline.md (commit 190be713); registry modules/ANCHORS.md.
+     Rewritten the same day at 07:4x on the user's word ("Doe maar geen addendum. Herschrijf het stuk (een beetje)."), replacing a dated
+     addendum that was live from 07:2x: the four families on s5, computed after the read (chain 41 addendum, commit e0dde855) — size arm
+     CH-stretch 3.24, CH-oop 4.99, ring-ip 3.79, other 5.04 cm-1; controls 1.18-1.40, 4.10-4.13, 2.98-3.77, 4.54-4.77; target 3 cm-1 per
+     family (decision 53); 82 % = 1 - 3.97 / 22.63. -->
 
 Two things held this project back in the past fortnight. One was a measurement that seemed to say our method stops working when molecules
 get bigger. The other was money: the most accurate reference numbers we use, the [anchors](/glossary/#anchor), needed a rented server that we
@@ -46,8 +50,17 @@ the two models are off by 3.97 and 3.41 cm⁻¹ on these molecules, where making
 twice as many five-ring molecules barely changed it (0.413 with half, 0.406 with all), so this is not a case of the control simply having had
 too few examples.
 
-So the steep penalty of chain 39 came mostly from the new ring count, not from size itself, and here a new ring count did not hurt. Up to 40
-atoms, size is not a wall.
+So the steep penalty of chain 39 came mostly from the new ring count, not from size itself. For the ring couplings, the quantity this test
+was built to measure, size up to 40 atoms is not a wall.
+
+**Equally good is not yet good enough.** Two models can agree and both be poor, so the ratio alone does not settle it. The absolute numbers
+settle part of it: without a single five-ring molecule in training, the model still removes about 82 % of the frequency error on these
+molecules, from 22.6 to 4.0 cm⁻¹. But our target is 3 cm⁻¹ or less in every family of vibrations, and on the five-ring molecules no family
+gets there, with or without five-ring examples ([per family](https://github.com/thebreadishard/udacity-capstone-plan/commit/e0dde855)). The out-of-plane hydrogen bends and the catch-all family sit at
+4 to 5 cm⁻¹, as they also do on some families inside the corpus. And one family tells a different story from the ratio: the carbon–hydrogen
+stretches are off by 3.2 cm⁻¹ without five-ring examples and by 1.2 to 1.4 with them. A handful of larger ring systems in the corpus clearly
+helps. These family numbers were promised beside the ratio before the test, but our read script left them out; we computed them only after
+the result was known.
 
 **The cheaper ruler.** The second story is about the anchors: molecules for which we have the expensive kind of calculation,
 [coupled cluster](/glossary/#coupled-cluster), the reference the network is checked and tuned against. Even that is done in two parts. The
@@ -87,15 +100,3 @@ calculations for them showed an unstable vibration; they come back when better r
 shortcut was tested on two molecules and adopted with a margin smaller than predicted: if one of the new anchors behaves differently, the old
 way is still there, on a server, when the budget allows.
 
-**Addendum, 20 October, 07:30.** A reader's devil's-advocate question: if both models were equally bad on the five-ring molecules, the ratio
-would still say "equal". So how good are they, not just how alike? The registration had promised four more numbers beside the ratio, one
-per family of vibrations, and our read script had left them out. They are in now ([the addendum](https://github.com/thebreadishard/udacity-capstone-plan/commit/e0dde855)),
-computed after the result was known, so they carry no line.
-
-They are not equally bad: without any five-ring molecule in training, the model still removes about 82 % of the frequency error on these
-molecules (from 22.6 to 4.0 cm⁻¹). But they are not good enough either. Our target is 3 cm⁻¹ or less in every family, and on the five-ring
-molecules no family gets there, with or without five-ring examples: the out-of-plane hydrogen bends and the catch-all family sit at 4 to 5
-cm⁻¹, as they also do on some families inside the corpus. And one family tells a different story from the ratio: the carbon–hydrogen
-stretches are off by 3.2 cm⁻¹ without five-ring examples and by 1.2 to 1.4 with them, about two and a half times better. So the sentence
-"size is not a wall" holds for the ring couplings, which is what the test was built to measure. It does not mean the corpus can do without
-larger ring systems: a handful of them clearly helps.
