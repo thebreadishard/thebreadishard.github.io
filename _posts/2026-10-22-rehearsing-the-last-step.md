@@ -6,7 +6,8 @@ categories: plan05 progress
 ---
 
 <!-- Written 21-22 Oct 2026 (the user: 'later vandaag of morgen ook een blog'; rewritten 22 Oct morning on their request: simpler,
-     no skipped steps; 'What this means' answers its own question); published 22 Oct on the user's word ('Publiceer maar').
+     no skipped steps; 'What this means' answers its own question); published 22 Oct on the user's word ('Publiceer maar'); the source
+     links added the same morning after the plan repo was pushed ('Push ook maar').
      Numbers trace to (CapstonePlan repo, plans/05_delta-probed-ir-pipeline):
      GoalGathering/notes/PreRegistration_2026-10-12_Anchor_Set_Three.md, Outcome: the final read (20 Oct 23:58; R-A 14.06 -> 13.69, R-B 0 of 3)
        and the whole-head repeat (21 Oct 09:22, commit 3c088dd1; amendment 2801b401): R-A 7.24 -> 6.25 (-13.8 %), R-B 3 of 3;
@@ -50,7 +51,7 @@ where the hydrogen atoms move up and down out of the plane of the rings. These a
 spectrum.
 
 The answer was no. On the six original anchors the error went from 14.06 to 13.69 cm⁻¹ when five new anchors joined, which is within
-the noise. The predicted brightness of the lines was also worse than not correcting at all, on all three anchors where we could check it.
+the noise ([the read](https://github.com/thebreadishard/udacity-capstone-plan/commit/15540e0c)). The predicted brightness of the lines was also worse than not correcting at all, on all three anchors where we could check it.
 
 ## A night of asking why
 
@@ -67,7 +68,7 @@ If it cannot reproduce the anchors it was just shown, more anchors will not help
 
 That is what happened. With only the last layer allowed to change, the network stayed 7.76 cm⁻¹ off on the very anchors it had been
 shown. With the whole head allowed to change, it reproduced them to within 0.80 cm⁻¹. It *could* take the answers in; we had not let
-it. Tested properly again, on anchors it had not seen, the error halved: from 12.29 to 6.54 cm⁻¹, averaged over three repeats.
+it. Tested properly again, on anchors it had not seen, the error halved: from 12.29 to 6.54 cm⁻¹, averaged over three repeats ([the night's report](https://github.com/thebreadishard/udacity-capstone-plan/commit/409a58c6)).
 
 A second finding explains why the brake hurt. For the out-of-plane vibrations, the coupled-cluster correction does not point the same way
 as the stand-in correction; it partly points the opposite way. A brake that holds the network near the stand-in holds it near the wrong
@@ -76,7 +77,7 @@ answer.
 ## Repeating the test, honestly
 
 The next morning we ran the registered test again, this time with the whole head free and the predictions written down first. Both came
-out as predicted. The out-of-plane error now falls with every added anchor, from 7.24 to 6.25 cm⁻¹ (14 % lower), and the line
+out as predicted. The out-of-plane error now falls with every added anchor, from 7.24 to 6.25 cm⁻¹ (14 % lower; [the read](https://github.com/thebreadishard/udacity-capstone-plan/commit/3c088dd1)), and the line
 brightness beats "no correction" on all three anchors where we can check it.
 
 That is encouraging, but it is not proof. I chose the whole-head approach *by looking at these same eleven anchors*. It is like adjusting
@@ -98,12 +99,12 @@ For each *k*, from 5 to 200, four ways of adjusting competed: the last layer wit
 brake, the whole head free, and a fresh network that learns from the *k* molecules alone. The fresh network tells us what the earlier
 practice is worth.
 
-Before anything ran, we wrote down what we expected: in the first rehearsal the whole head should beat the old way; in the second
+Before anything ran, we wrote down what we expected ([the registration](https://github.com/thebreadishard/udacity-capstone-plan/commit/bf408823)): in the first rehearsal the whole head should beat the old way; in the second
 probably not, because there the correction does not change, only the molecules.
 
 ## What the rehearsal said
 
-Both expectations held.
+Both expectations held ([the read](https://github.com/thebreadishard/udacity-capstone-plan/commit/07818876)).
 
 In the first rehearsal, the old way did not learn at all. With the brake on, the out-of-plane error stayed between 8 and 10 cm⁻¹ whether
 the network saw 5 molecules or 200: the brake kept it on the wrong correction. With the whole head free, the error fell steadily, from
