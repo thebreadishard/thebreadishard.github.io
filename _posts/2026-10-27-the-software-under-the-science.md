@@ -34,6 +34,9 @@ because a better fix came along, and four are ready but not yet submitted. Below
 
 ## PySCF
 
+[PySCF](https://github.com/pyscf/pyscf) is a free Python library for quantum chemistry, written and kept up by researchers and
+volunteers; almost every calculation in this project runs on it. Its documentation is at [pyscf.org](https://pyscf.org).
+
 - **[#3469](https://github.com/pyscf/pyscf/pull/3469), accepted 6 October.** When you ask PySCF for the
   [gradient](/glossary/#analytic-derivative) of a [CCSD(T)](/glossary/#ccsd-t) energy without first computing one particular
   intermediate, it quietly used the intermediate of the simpler CCSD method. The result looked fine but was the slope of a different
@@ -57,6 +60,8 @@ because a better fix came along, and four are ready but not yet submitted. Below
 
 ## PySCF-forge (PySCF's add-ons)
 
+[PySCF-forge](https://github.com/pyscf/pyscf-forge) holds new methods for PySCF until they are ready to move into PySCF itself.
+
 - **[#212](https://github.com/pyscf/pyscf-forge/pull/212), accepted 30 September.** The add-on for
   [local correlation](/glossary/#local-correlation) methods stopped working with the newest versions of PySCF and of NumPy, the
   number-crunching library underneath. Two small changes made it work again.
@@ -66,6 +71,9 @@ because a better fix came along, and four are ready but not yet submitted. Below
 
 ## PySCF properties
 
+[PySCF properties](https://github.com/pyscf/properties) computes how molecules and crystals respond to electric and magnetic
+fields, among them the brightness of infrared lines.
+
 - **[#16](https://github.com/pyscf/properties/pull/16), waiting for review since 11 October.** The infrared routine crashed when you
   handed it your own orbitals instead of letting it compute them; only the default route worked.
 - **[#17](https://github.com/pyscf/properties/pull/17), waiting for review since 11 October.** The existing tests of the infrared
@@ -73,6 +81,10 @@ because a better fix came along, and four are ready but not yet submitted. Below
   [finite differences](/glossary/#finite-differences), small steps of the atoms with the dipole moment computed at each step.
 
 ## pyVPT2 (anharmonic corrections)
+
+[pyVPT2](https://github.com/philipmnel/pyvpt2) computes the [anharmonic](/glossary/#anharmonicity) corrections to vibrational
+frequencies by [second-order perturbation theory](/glossary/#vpt2), on top of the quantum-chemistry package [Psi4](/glossary/#psi4)
+([documentation](https://philipmnel.github.io/pyvpt2/)).
 
 - **[#59](https://github.com/philipmnel/pyvpt2/pull/59), accepted 19 October.** pyVPT2 has a built-in check that is meant to warn
   when its numbers are noisy. The check compared two numbers that were equal by construction, so it could never fire. It now compares
@@ -84,11 +96,18 @@ because a better fix came along, and four are ready but not yet submitted. Below
 
 ## optking (geometry optimisation)
 
+[optking](https://github.com/psi-rking/optking) searches for the shape in which a molecule is most stable, a
+[geometry optimisation](/glossary/#geometry-optimisation). It started as part of Psi4 and is now a separate Python program.
+
 - **[#116](https://github.com/psi-rking/optking/pull/116), accepted 13 October.** An optimisation could hang forever, using a full
   processor core and printing nothing, when an angle close to zero was mistaken for a straight line. optking now recognises that case
   and starts again cleanly. Report: [#115](https://github.com/psi-rking/optking/issues/115).
 
 ## dxtb (a fast approximate method)
+
+[dxtb](https://github.com/grimme-lab/dxtb), from Stefan Grimme's group in Bonn, is a fast approximate quantum-chemistry method
+(extended tight binding) written in PyTorch, so that it can be combined with machine learning
+([documentation](https://dxtb.readthedocs.io)).
 
 - **[#278](https://github.com/grimme-lab/dxtb/pull/278), accepted 23 October.** The forces on the atoms came out wrong when the
   calculator reused results it had stored for an earlier geometry. It now clears those stored results when it gets a new geometry.
