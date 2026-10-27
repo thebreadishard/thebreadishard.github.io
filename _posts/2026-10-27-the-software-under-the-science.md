@@ -9,6 +9,8 @@ categories: plan05 software
      een lijst met de PR's, met een of twee zinnen per PR voor de leek'); the AI paragraph on the user's word ('Absoluut: dat de code met
      een AI-assistent is geschreven en getest'); published 27 Oct on the user's word ('Publiceer maar'), the four unsubmitted PRs kept
      at the end on purpose (the user: they show that you do not know in advance whether a contribution will succeed); to be extended later.
+     Same day, on the user's question ('Werk je de blog bij?'): the four submitted as pyscf/pyscf#3545-#3548, the section renamed and
+     corrected (it said all four are about cations; the empty block and the CCSD(T) tables are not).
      Sources: the pull requests and issues themselves (gh search prs/issues --author thebreadishard, 27 Oct 2026, 03:2x); the merge dates
      are GitHub's. The four unsubmitted PRs: CapstonePlan, plans/05_delta-probed-ir-pipeline/GoalGathering/notes/PR_Drafts_2026-10-27_pyscf.md
      (benzene/cc-pVTZ 28 GB per array; H2O+/aug-cc-pVTZ peak 4.09 -> 3.38 GB; benzene+ 22 GB per array, acenaphthylene+ 830 GB; the
@@ -29,8 +31,8 @@ One thing should be said plainly. The code in these pull requests was written an
 which works on this project with me. I decide what we take on and hand in the pull requests; tracking down the cause, writing the
 change and proving it with tests is its work.
 
-So far that has been nineteen pull requests to six projects. Eleven have been accepted, two are waiting for review, two we withdrew
-because a better fix came along, and four are ready but not yet submitted. Below is each of them, in a sentence or two.
+So far that has been nineteen pull requests to six projects. Eleven have been accepted, six are waiting for review (four of them
+submitted on 27 October), and two we withdrew because a better fix came along. Below is each of them, in a sentence or two.
 
 ## PySCF
 
@@ -113,19 +115,20 @@ frequencies by [second-order perturbation theory](/glossary/#vpt2), on top of th
   calculator reused results it had stored for an earlier geometry. It now clears those stored results when it gets a new geometry.
   Report: [#277](https://github.com/grimme-lab/dxtb/issues/277).
 
-## Ready for PySCF, not yet submitted
+## Submitted to PySCF, waiting for review
 
-These four are about *[cations](/glossary/#cation)*, molecules that have lost one electron. Many PAHs in space are cations, and the
-most accurate method we use, CCSD(T), ran out of memory on every cation beyond the smallest. These four PRs have not been reviewed
-yet, so they may still change or be turned down.
+We submitted these four on the morning of 27 October, after reworking all four to follow the style rules that PySCF publishes for
+contributors. None of them has been reviewed yet, so they may still change or be turned down. The first two fix problems that can
+hit any molecule. The other two are about *[cations](/glossary/#cation)*, molecules that have lost one electron. Many PAHs in space
+are cations, and the most accurate method we use, CCSD(T), ran out of memory on every cation beyond the smallest.
 
-- **Empty block.** The gradient code works through the [basis functions](/glossary/#basis-set) in blocks. When an atom's first group of
+- **[#3545](https://github.com/pyscf/pyscf/pull/3545), empty block.** The gradient code works through the [basis functions](/glossary/#basis-set) in blocks. When an atom's first group of
   functions was wider than one block, the first block came out empty and the calculation crashed. We met it on benzene with a large
   basis set.
-- **CCSD(T) tables on disk.** PySCF has a route that is meant to keep the biggest tables on disk instead of in memory. For the CCSD(T)
+- **[#3546](https://github.com/pyscf/pyscf/pull/3546), CCSD(T) tables on disk.** PySCF has a route that is meant to keep the biggest tables on disk instead of in memory. For the CCSD(T)
   gradient it still built three of them in memory, 28 GB each for benzene with a large basis set. They now go to disk.
-- **The same for cations.** The cation version of the same calculation had the same problem. On a small test molecule the memory peak
+- **[#3547](https://github.com/pyscf/pyscf/pull/3547), the same for cations.** The cation version of the same calculation had the same problem. On a small test molecule the memory peak
   drops from 4.1 to 3.4 GB.
-- **CCSD(T) for cations in pieces.** The cation CCSD(T) gradient built several tables of about 22 GB each for the benzene cation, and
+- **[#3548](https://github.com/pyscf/pyscf/pull/3548), CCSD(T) for cations in pieces.** The cation CCSD(T) gradient built several tables of about 22 GB each for the benzene cation, and
   830 GB each for a three-ring cation. The work is now done in blocks small enough to fit. The whole gradient of the benzene cation
   ran on a laptop with a memory peak of 6.1 GB.
