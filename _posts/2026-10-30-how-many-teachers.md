@@ -5,8 +5,8 @@ date: 2026-10-30 08:00:00 +0100
 categories: plan05 progress
 ---
 
-<!-- Draft written 29–30 Oct 2026 overnight (TASKS 143; the user: 'Doe alles maar' for the night's list, which said: the anchor-price
-     post as a draft only, published on the user's word). Numbers trace to (CapstonePlan repo, plans/05_delta-probed-ir-pipeline):
+<!-- Written 29–30 Oct 2026 overnight (TASKS 143; the user: 'Doe alles maar' for the night's list), published 30 Oct on the user's
+     word. Correction of 1 Nov: the anchor count, from modules/05_support_predictor/out/ANCHORS_STATUS.json (eleven carried). Numbers trace to (CapstonePlan repo, plans/05_delta-probed-ir-pipeline):
      modules/05_support_predictor/out/anchor_count_2026-10-29/anchor_count_read.md (commit 2c9332b6): arm (c), body1_es: crossings of
        3 cm-1 at k = 100 for ring-ip and CH-stretch, CH-oop 167 (153–177), 'other' > 200; at k = 200: 1.71 / 1.76 / 2.73 / 3.59;
      modules/05_support_predictor/out/anchor_price_2026-10-28/anchor_price_read.md: C1 (a cover beats random draws) does not hold;
@@ -76,3 +76,12 @@ How the missing anchors will be made is decided in November. This post gives tha
 three of the four families) and what that costs (between about €730 and €3,000 of rented time).
 
 The full numbers, the scripts and the lines written before the runs are in the project's repository.
+
+## Correction, 1 November 2026
+
+This post says we have "about ten" anchors and calls them "the ten we have". The count is eleven, the same eleven as in
+[Rehearsing the last step]({% post_url 2026-10-22-rehearsing-the-last-step %}): benzene, naphthalene, pyridine, fluorobenzene,
+benzonitrile and anthracene since 6–7 October, and quinoxaline, quinoline, isoquinoline, azulene and acenaphthylene since 20 October.
+(The post of 20 October called quinoxaline "one of seven": that was true that morning, before the other four came in the same
+day.) The argument does not change: with eleven, a test that trains on some anchors and checks on the rest still rests on one or two
+molecules at a time.

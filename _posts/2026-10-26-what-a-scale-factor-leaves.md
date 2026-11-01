@@ -100,3 +100,14 @@ Two caveats. The first part is the stand-in, not experiment. And the second part
 not how large they will be across all PAHs.
 
 The full numbers, the scripts and the note written beforehand are in the project's repository.
+
+## Correction, 1 November 2026
+
+The second paragraph says the NASA Ames PAH database uses the scale factors 0.956, 0.952 and 0.960. That was stated too firmly.
+Those three numbers are the factors Mai, Lu and Wang give for the database, citing its 2018 paper: 0.960 above 2500 cm⁻¹, 0.952
+between 1111 and 2500, and 0.956 below 1111. They are the numbers their library uses. Nothing in this post's results depends on
+them: the practice-task table fits its own best factors, and the comparison with experiment uses their scaled spectra as they
+published them. The database file itself, as served for download, stores
+other factors: 0.9597, 0.9691 and 0.9794, as this notebook found when it read the file on 11 September
+([Who are we up against?]({% post_url 2026-09-11-who-are-we-up-against %})). Why the published factors and the stored ones differ we
+have not settled.
