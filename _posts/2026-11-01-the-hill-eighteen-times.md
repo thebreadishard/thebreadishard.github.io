@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "The hill, eighteen times"
-date: 2026-11-01 21:00:00 +0100
+date: 2026-11-01 21:40:33 +0100
 categories: plan05 probes
 ---
 
-<!-- Written 1 Nov 2026 at the user's request ("Schrijf de blog over de geometrieterm"); published on the user's word. Numbers trace to
+<!-- Written 1 Nov 2026 at the user's request ("Schrijf de blog over de geometrieterm"); published 1 Nov on the user's word ("Publiceer maar"). Numbers trace to
      (CapstonePlan repo, plans/05_delta-probed-ir-pipeline):
      GoalGathering/notes/PreRegistration_2026-10-31_Geometry_Term.md — registered 31 Oct (commit 613d1381), amendment 1 (dd3890a3),
        amendment 2 before the read (ac7c0f44), outcome (179669fd);
