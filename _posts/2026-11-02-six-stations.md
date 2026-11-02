@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Six stations"
-date: 2026-11-02 18:00:00 +0100
+date: 2026-11-02 17:08:32 +0100
 categories: plan05 pipeline
 ---
 
-<!-- Written 2 Nov 2026 at the user's request ("Ja, schrijf het concept maar"; TASKS 167). Draft: not published. Numbers trace to
+<!-- Written 2 Nov 2026 at the user's request ("Ja, schrijf het concept maar"; TASKS 167). Published 2 Nov on the user's word ("Publiceer maar"). Numbers trace to
      (CapstonePlan repo, plans/05_delta-probed-ir-pipeline):
      probes/pipeline_show_summary.py and its record probes/results_m1/pipeline_show_summary_2026-11-02.md (commit efd796cb): the 38 runs the
        show links to, per role: hold-out (a) 8 runs, 12–26 atoms, median rms 1.64, largest 3.22; hold-out (b) 4 runs, 23–28 atoms, median
