@@ -33,12 +33,16 @@ link straight to it (for example `/glossary/#hessian`).
 <dd>A way to estimate how uncertain a fitted number is by repeating the fit many times on random resamples of the data and looking at the spread of the results.</dd>
 <dt id="cation">Cation</dt>
 <dd>A molecule that has lost an electron and so carries a positive charge, as many PAHs in space are thought to have.</dd>
+<dt id="cc-pvdz"><span id="cc-pvtz"></span>cc-pVDZ and cc-pVTZ</dt>
+<dd>Two standard basis sets made for correlated methods such as coupled cluster: the double-zeta set (DZ) gives each electron shell two sets of functions, the triple-zeta set (TZ) three, so TZ is more accurate and several times more expensive.</dd>
 <dt id="ccsd-t">CCSD(T)</dt>
 <dd>Coupled cluster with single, double and perturbative triple excitations, often called the "gold standard" of quantum chemistry for molecules like these: accurate, but very expensive.</dd>
 <dt id="combination-band">Combination band</dt>
 <dd>A weak infrared band in which one photon excites two different vibrations at once, so that it appears near the sum of their frequencies.</dd>
 <dt id="commit">Commit</dt>
 <dd>A recorded snapshot of the project's files in the version-control system git, to which every number in these notes can be traced.</dd>
+<dt id="composite">Composite method</dt>
+<dd>Building one accurate result from cheaper pieces; in this project the anchors take CCSD(T) in the small cc-pVDZ basis and add the change that MP2 shows from cc-pVDZ to cc-pVTZ, which on benzene lands within 4.6 wavenumbers of the full CCSD(T)/cc-pVTZ calculation.</dd>
 <dt id="coriolis-coupling">Coriolis coupling</dt>
 <dd>The interaction between a molecule's rotation and its vibrations, a small term that enters the anharmonic corrections.</dd>
 <dt id="corpus">Corpus</dt>
@@ -121,6 +125,8 @@ link straight to it (for example `/glossary/#hessian`).
 <dd>The number that a network's training tries to make small, measuring how far its predictions are from the targets.</dd>
 <dt id="mass-weighted-coordinates">Mass-weighted coordinates</dt>
 <dd>Atomic displacements scaled by the square root of each atom's mass, the natural coordinates in which a molecule's vibrations separate into independent normal modes.</dd>
+<dt id="mp2">MP2</dt>
+<dd>Second-order Møller–Plesset perturbation theory: the simplest correction for electron correlation on top of Hartree–Fock, far cheaper than coupled cluster and good enough to estimate how much a larger basis set changes the answer.</dd>
 <dt id="neural-network">Neural network</dt>
 <dd>A flexible mathematical model made of many simple connected units whose parameters are adjusted on examples until it predicts well.</dd>
 <dt id="noise-guard">Noise guard</dt>
