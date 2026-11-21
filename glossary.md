@@ -34,7 +34,7 @@ link straight to it (for example `/glossary/#hessian`).
 <dt id="cation">Cation</dt>
 <dd>A molecule that has lost an electron and so carries a positive charge, as many PAHs in space are thought to have.</dd>
 <dt id="cc-pvdz"><span id="cc-pvtz"></span>cc-pVDZ and cc-pVTZ</dt>
-<dd>Two standard basis sets made for correlated methods such as coupled cluster: the double-zeta set (DZ) gives each electron shell two sets of functions, the triple-zeta set (TZ) three, so TZ is more accurate and several times more expensive.</dd>
+<dd>Dunning's correlation-consistent polarized valence basis sets, built for correlated methods such as coupled cluster: double-zeta (DZ) describes each valence orbital with two contracted functions and triple-zeta (TZ) with three, each with polarization functions added, so TZ is more accurate and several times more expensive.</dd>
 <dt id="ccsd-t">CCSD(T)</dt>
 <dd>Coupled cluster with single, double and perturbative triple excitations, often called the "gold standard" of quantum chemistry for molecules like these: accurate, but very expensive.</dd>
 <dt id="combination-band">Combination band</dt>
